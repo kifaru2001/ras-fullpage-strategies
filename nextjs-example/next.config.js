@@ -1,4 +1,9 @@
-const withCSS = require('@zeit/next-css');
-const withSass = require('@zeit/next-sass');
-
-module.exports = withCSS(withSass({}));
+module.exports = {
+    webpack: (
+      config,
+      { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+    ) => {
+      // Important: return the modified config
+      return config
+    },
+  }
